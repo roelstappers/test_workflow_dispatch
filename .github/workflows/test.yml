@@ -18,4 +18,5 @@ jobs:
     runs-on: self-hosted
     steps:
     - run: |
-        echo "Running harmonie start DTG=${{ github.event.inputs.DTG }} DTGEND=${{ github.event.inputs.DTGEND }} BUILD=${{ github.event.inputs.BUILD }} "
+        echo "Running harmonie start DTG=${{ github.event.inputs.DTG }} DTGEND=${{ github.event.inputs.DTGEND }} BUILD=${{ github.event.inputs.BUILD }}"
+        echo `uname -a`
