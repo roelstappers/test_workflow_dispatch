@@ -1,5 +1,5 @@
 
-
+name: run Harmonie
 on: 
   workflow_dispatch:
     inputs:
