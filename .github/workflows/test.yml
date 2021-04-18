@@ -15,7 +15,7 @@ on:
 
 jobs:
   printInputs:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - run: |
         echo "Running harmonie start DTG=${{ github.event.inputs.DTG }} DTGEND=${{ github.event.inputs.DTGEND }} BUILD=${{ github.event.inputs.BUILD }} "
