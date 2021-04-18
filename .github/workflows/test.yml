@@ -3,17 +3,19 @@ name: run Harmonie
 on: 
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
+      DTG:
+        description: 'Start DTG'     
         required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
+      DTGEND:
+        description: 'End DTG'
+        required: true
+      BUILD:
+       required: true
+       default: true
 
 jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}" 
+        echo "Running harmonie start DTG=${{ github.event.inputs.DTG }} DTGEND=${{ github.event.inputs.DTGEND }} BUILD=${{ github.event.inputs.BUILD }} "
